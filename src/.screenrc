@@ -1,0 +1,37 @@
+hardstatus alwayslastline
+hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+
+
+
+#kill screen's startup message
+startup_message off
+
+# define a bigger scrollback, default is 100 lines
+# defscrollback 1024
+defscrollback 4192
+
+# An alternative hardstatus to display a bar at the bottom listing the
+# window names and highlighting the current window name in blue.
+#hardstatus on
+#hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+
+# Execute .bash_profile on startup
+shell -$SHELL
+
+# Use C-z instead of C-a as this makes more sense for Emacs
+escape ^z^z
+
+bind s split
+bind S split -v
+
+bind { resize -4
+bind } resize +4
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+defbce "on"
