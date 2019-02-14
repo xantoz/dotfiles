@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 PROGRAM_NAME="$0"
 # Ensure we run with the correct current directory
@@ -85,6 +85,16 @@ install_screenrc()
 uninstall_screenrc()
 {
     rm_symlink "${HOME}/.screenrc"
+}
+
+MODULES="${MODULES} youtube-dl"
+install_youtube-dl()
+{
+    do_symlink "src/youtube-dl" "${HOME}/.config/youtube-dl"
+}
+uninstall_youtube-dl()
+{
+    rm_symlink "${HOME}/.config/youtube-dl"
 }
 #### END MODULES
 
