@@ -1,0 +1,44 @@
+#+STARTUP: indent
+
+* Purpose
+
+In this repository I collect misc dotfiles which don't really belong
+in another repo, or that must be present at a fixed location that
+cannot practically be made to fit within a regular git repo, such as
+=.screenrc=.[fn:1]
+
+* Usage
+
+** Install
+Install using:
+
+#+BEGIN_EXAMPLE
+$ ./install.sh install
+#+END_EXAMPLE
+
+This will create symlinks at appropriate places in the home
+directory, create folders when needed etc.
+
+This will not overwrite any existing files, but will warn when
+there is an existing file that you might want to remove.
+
+** Uninstall
+Uninstall using:
+
+#+BEGIN_EXAMPLE
+$ ./install.sh uninstall
+#+END_EXAMPLE
+
+*WARNING:* This will do some simple checks to check whether it
+looks like the file was installed by this script; however it might
+be as simple as checking whether the file is a symlink or not, and
+thus might inadvertently remove a file that was not installed with
+the script.
+
+* Footnotes
+
+[fn:1] Cf. my ratpoison or emacs configuration, where I can put the
+configuration in another directory and have a simple stub at
+=~/.ratpoisonrc= or =~/.emacs= that loads the actual configuration.
+Thus they qualify to have their own repo by virtue of this, as well
+as by being very large and complex configurations on their own.
