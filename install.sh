@@ -106,6 +106,16 @@ uninstall_feh()
 {
     rm_symlink "${HOME}/.config/feh"
 }
+
+MODULES="${MODULES} zile"
+install_zile()
+{
+    do_symlink "src/.zile" "${HOME}/.zile"
+}
+uninstall_zile()
+{
+    rm_symlink "${HOME}/.zile"
+}
 #### END MODULES
 
 register_module_installed()
