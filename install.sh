@@ -132,7 +132,7 @@ install()
             register_module_installed "$i"
         fi
     done
-    
+
     if [ -n "${PARTIAL}" ]; then
         log_err "Not able to install all files."
     fi
