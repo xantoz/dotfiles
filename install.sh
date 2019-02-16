@@ -96,6 +96,16 @@ uninstall_youtube-dl()
 {
     rm_symlink "${HOME}/.config/youtube-dl"
 }
+
+MODULES="${MODULES} feh"
+install_feh()
+{
+    do_symlink "src/feh" "${HOME}/.config/feh"
+}
+uninstall_feh()
+{
+    rm_symlink "${HOME}/.config/feh"
+}
 #### END MODULES
 
 register_module_installed()
