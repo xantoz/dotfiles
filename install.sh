@@ -116,6 +116,16 @@ uninstall_zile()
 {
     rm_symlink "${HOME}/.zile"
 }
+
+MODULES="${MODULES} dunst"
+install_dunst()
+{
+    do_symlink "src/dunst" "${HOME}/.config/dunst"
+}
+uninstall_dunst()
+{
+    rm_symlink "${HOME}/.config/dunst"
+}
 #### END MODULES
 
 register_module_installed()
