@@ -126,6 +126,16 @@ uninstall_dunst()
 {
     rm_symlink "${HOME}/.config/dunst"
 }
+
+MODULES="${MODULES} redshift"
+install_redshift()
+{
+    do_symlink "src/redshift.conf" "${HOME}/.config/redshift.conf"
+}
+uninstall_redshift()
+{
+    rm_symlink "${HOME}/.config/redshift.conf"
+}
 #### END MODULES
 
 register_module_installed()
