@@ -130,7 +130,12 @@ uninstall_dunst()
 MODULES="${MODULES} redshift"
 install_redshift()
 {
-    do_symlink "src/redshift.conf" "${HOME}/.config/redshift.conf"
+    suffix=''
+    case "${HOSTNAME}" in
+        colgate) suffix='-colgate' ;;
+        *)       suffix=''         ;;
+    esac
+    do_symlink "src/redshift${suffix}.conf" "${HOME}/.config/redshift.conf"
 }
 uninstall_redshift()
 {
@@ -198,6 +203,7 @@ usage()
 check_variables()
 {
     [ -n "${HOME}" ] || die "Environment variable HOME is not set"
+    [ -n "${HOSTNAME}" ] || die "Environment variable HOSTNAME is not set"
 }
 
 [ $# -ge 1 ] || usage
