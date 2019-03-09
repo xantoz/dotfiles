@@ -1,0 +1,9 @@
+background-color=#285577CC
+icons=1
+
+# TODO: fix this (seems like app-name depends on what phone app it came from with kdeconnect)
+[app-name=kdeconnect]
+text-color=#00ff00
+
+[actionable=true]
+text-color=#fffa8c

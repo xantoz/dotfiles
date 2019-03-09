@@ -127,6 +127,16 @@ uninstall_dunst()
     rm_symlink "${HOME}/.config/dunst"
 }
 
+MODULES="${MODULES} mako"
+install_mako()
+{
+    do_symlink "src/mako" "${HOME}/.config/mako"
+}
+uninstall_mako()
+{
+    rm_symlink "${HOME}/.config/mako"
+}
+
 MODULES="${MODULES} redshift"
 install_redshift()
 {
