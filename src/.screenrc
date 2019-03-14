@@ -35,3 +35,7 @@ attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 # erase background with current bg color
 defbce "on"
+
+# bind o exec /bin/sh -c "resize | head -2 | tr '\n' ' '"   # needs fixing...
+# bind o exec /bin/sh -c "resize | head -2 | tr '\n' ' ' | sed -e 's/;//g' -e 's/COLUMNS=/cols /' -e 's/LINES=/rows /"
+bind o exec /bin/sh -c 'resize | head -2 | tr "\n" " " | sed -e "s/;//g" -e "s/COLUMNS=/cols /" -e "s/LINES=/rows /" -e "s/^/stty /"'
