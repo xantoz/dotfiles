@@ -142,8 +142,9 @@ install_redshift()
 {
     suffix=''
     case "${HOSTNAME}" in
-        colgate) suffix='-colgate' ;;
-        *)       suffix=''         ;;
+        colgate)      suffix='-colgate' ;;
+        usbee-ubuntu) suffix='-usbee' ;;
+        *)            suffix=''         ;;
     esac
     do_symlink "src/redshift${suffix}.conf" "${HOME}/.config/redshift.conf"
 }
