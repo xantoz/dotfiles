@@ -7,3 +7,9 @@ text-color=#00ff00
 
 [actionable=true]
 text-color=#fffa8c
+
+[urgency=low]
+text-color=#a9a9a9
+
+[urgency=high]
+text-color=#ff1122
