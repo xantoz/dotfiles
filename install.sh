@@ -137,6 +137,16 @@ uninstall_mako()
     rm_symlink "${HOME}/.config/mako"
 }
 
+MODULES="${MODULES} waybar"
+install_waybar()
+{
+    do_symlink "src/waybar" "${HOME}/.config/waybar"
+}
+uninstall_waybar()
+{
+    rm_symlink "${HOME}/.config/waybar"
+}
+
 MODULES="${MODULES} redshift"
 install_redshift()
 {
