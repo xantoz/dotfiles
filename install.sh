@@ -172,6 +172,16 @@ uninstall_kitty()
 {
     rm_symlink "${HOME}/.config/kitty"
 }
+
+MODULES="${MODULES} alacritty"
+install_alacritty()
+{
+    do_symlink "src/alacritty" "${HOME}/.config/alacritty"
+}
+uninstall_alacritty()
+{
+    rm_symlink "${HOME}/.config/alacritty"
+}
 #### END MODULES
 
 register_module_installed()
