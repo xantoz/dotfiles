@@ -162,6 +162,16 @@ uninstall_redshift()
 {
     rm_symlink "${HOME}/.config/redshift.conf"
 }
+
+MODULES="${MODULES} kitty"
+install_kitty()
+{
+    do_symlink "src/kitty" "${HOME}/.config/kitty"
+}
+uninstall_kitty()
+{
+    rm_symlink "${HOME}/.config/kitty"
+}
 #### END MODULES
 
 register_module_installed()
