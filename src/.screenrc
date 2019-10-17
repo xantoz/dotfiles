@@ -40,4 +40,6 @@ bind x exec sh -c 'resize | head -2 | tr "\n" " " | sed -e "s/;//g" -e "s/COLUMN
 bind ^x
 
 # Bring the current copy/paste buffer inte X11
-bind b eval "writebuf" "exec sh -c 'xsel --clipboard < /tmp/screen-exchange'"
+bind b eval "writebuf" "exec sh -c 'xsel -i --clipboard < /tmp/screen-exchange'"
+# pull the X11 clipboard buffer into the paste buffer
+bind B exec sh -c 'xsel -o --clipboard | sed "s/^\.*//" > /tmp/screen-exchange; screen -X readbuf'
