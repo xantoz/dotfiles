@@ -36,6 +36,8 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 # erase background with current bg color
 defbce "on"
 
+bufferfile /tmp/screen-exchange
+
 bind x exec sh -c 'stty size | awk "{ print \"stty rows\",\$1,\"cols\",\$2 }" > /tmp/screen-exchange; printf "%s\\n" "export TERM=screen-256color" >> /tmp/screen-exchange; screen -X readbuf'
 bind ^x
 
