@@ -182,6 +182,16 @@ uninstall_alacritty()
 {
     rm_symlink "${HOME}/.config/alacritty"
 }
+
+MODULES="${MODULES} drirc"
+install_drirc()
+{
+    do_symlink "src/.drirc" "${HOME}/.drirc"
+}
+uninstall_drirc()
+{
+    rm_symlink "${HOME}/.drirc"
+}
 #### END MODULES
 
 register_module_installed()
