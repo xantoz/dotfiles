@@ -1,3 +1,4 @@
 --all-subs
 --embed-subs
 --no-mtime
+--postprocessor-args '-movflags +faststart'
