@@ -10,14 +10,14 @@ startup_message off
 # defscrollback 1024
 defscrollback 8192
 
-# An alternative hardstatus to display a bar at the bottom listing the
-# window names and highlighting the current window name in blue.
+## An alternative hardstatus to display a bar at the bottom listing the
+## window names and highlighting the current window name in blue.
 #hardstatus on
 #hardstatus alwayslastline
 #hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
 
 # Execute .bash_profile on startup
-shell -$SHELL
+#shell -$SHELL
 
 # Use C-z instead of C-a as this makes more sense for Emacs
 escape ^z^z
@@ -45,3 +45,6 @@ bind ^x
 bind b eval "writebuf" "exec sh -c 'xsel -i --clipboard < /tmp/screen-exchange'"
 # pull the X11 clipboard buffer into the paste buffer
 bind B exec sh -c 'xsel -o --clipboard | sed "s/^\.*//" > /tmp/screen-exchange; screen -X readbuf'
+
+## Useful when pasting into u-boot ...
+#slowpaste 20
