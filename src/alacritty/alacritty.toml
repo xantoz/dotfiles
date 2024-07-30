@@ -1,6 +1,3 @@
-
-v-----Start TOML for "/home/akindestam/.config/alacritty/alacritty.yml"-----v
-
 alt_send_esc = true
 background_opacity = 0.8
 "debug.persistent_logging" = false
@@ -624,7 +621,3 @@ lines = 0
 [window.padding]
 x = 2
 y = 2
-
-^-----End TOML for "/home/akindestam/.config/alacritty/alacritty.yml"-----^
-
-Successfully migrated "/home/akindestam/.config/alacritty/alacritty.yml" to "/home/akindestam/.config/alacritty/alacritty.toml"
