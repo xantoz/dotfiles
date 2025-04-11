@@ -1,6 +1,22 @@
 background-color=#285577CC
 icons=1
 
+on-button-left=invoke-default-action
+on-touch=invoke-default-action
+on-button-middle=exec BEMENU_BACKEND=wayland makoctl menu bemenu -b --list 20
+
+max-history=64
+
+ignore-timeout=1
+default-timeout=
+
+
+font=monospace 14
+# Make slightly wider than default 300 px, and allow for a much longer max height (less risk of missing longer messages. Especially given the larger font)
+width=450
+height=500
+
+
 # TODO: fix this (seems like app-name depends on what phone app it came from with kdeconnect)
 [app-name=kdeconnect]
 text-color=#00ff00
