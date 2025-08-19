@@ -1,11 +1,14 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 15px;
 }
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
+    /* background-color: rgba(43, 48, 59, 0.7); */
+
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -14,6 +17,7 @@ window#waybar {
 
 window#waybar.hidden {
     opacity: 0.2;
+
 }
 
 /*
@@ -54,7 +58,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 15px;
     background-color: transparent;
     color: #ffffff;
 }
@@ -102,6 +106,16 @@ button:hover {
 #workspaces {
     margin: 0 4px;
 }
+
+#window {
+    /* XZ Attempt at making the window title a bit more legible by giving it a darker background*/
+    /* background: rgba(99,99,99,0.9); */
+    background: rgba(70,70,70,0.9);
+
+    margin: 10px 40px;
+}
+
+
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -299,10 +313,11 @@ label:focus {
 
 #scratchpad {
     background: rgba(0, 0, 0, 0.2);
+
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #privacy {
