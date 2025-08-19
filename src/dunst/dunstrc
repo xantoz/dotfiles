@@ -1,5 +1,6 @@
 [global]
-    font = Monospace 8
+    #font = Monospace 8
+    font = Monospace 14
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
